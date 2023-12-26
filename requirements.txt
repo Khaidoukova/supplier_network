@@ -1,0 +1,10 @@
+asgiref
+Django
+djangorestframework
+psycopg
+psycopg2
+pytz
+sqlparse
+typing_extensions
+tzdata
+
