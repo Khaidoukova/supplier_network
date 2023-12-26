@@ -67,12 +67,16 @@ class Supply(models.Model):
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Товар')
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, verbose_name='Производитель')
-    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE, verbose_name='Поставщик')
+    supplier = models.ForeignKey(Supplier, related_name='related_supplier', on_delete=models.CASCADE,
+                                 verbose_name='Поставщик', null=True, blank=True)
+    recipient = models.ForeignKey(Supplier, related_name='related_recipient', on_delete=models.CASCADE,
+                                  verbose_name='Получатель поставки', null=True, blank=True)
     debt = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f'{self.product}, производитель {self.manufacturer}, поставщик {self.supplier}, дата {self.created_at}'
+        return (f'{self.product}, производитель {self.manufacturer}, поставщик {self.supplier}, '
+                f'получатель {self.recipient}, дата {self.created_at}')
 
     class Meta:
         verbose_name = 'Поставка'

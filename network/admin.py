@@ -5,15 +5,15 @@ from network.models import Manufacturer, Supplier, Product, Supply
 
 @admin.register(Manufacturer)
 class ManufacturerAdmin(admin.ModelAdmin):
-    list_display = ('title', 'country')
-    list_filter = ('country',)
+    list_display = ('title', 'country', 'city')
+    list_filter = ('city',)
     list_per_page = 10
 
 
 @admin.register(Supplier)
 class SupplierAdmin(admin.ModelAdmin):
-    list_display = ('title', 'country')
-    list_filter = ('country',)
+    list_display = ('title', 'country', 'city')
+    list_filter = ('city',)
     list_per_page = 10
 
 
