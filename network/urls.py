@@ -18,6 +18,4 @@ urlpatterns = [
     path('manufacturer/update/<int:pk>', ManufacturerUpdateAPIView.as_view(), name='manufacturer_update'),
     path('manufacturer/delete/<int:pk>', ManufacturerDestroyAPIView.as_view(), name='manufacturer_delete'),
 
-
-
 ] + router.urls

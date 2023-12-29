@@ -81,9 +81,3 @@ class Supply(models.Model):
     class Meta:
         verbose_name = 'Поставка'
         verbose_name_plural = 'Поставки'
-
-
-
-
-
-

@@ -34,4 +34,3 @@ class SupplyAdmin(admin.ModelAdmin):
         self.message_user(request, f'Задолженность перед поставщиком в выбранных поставках обнулена.')
 
     nullify_debt.short_description = 'Обнулить задолженность'
-

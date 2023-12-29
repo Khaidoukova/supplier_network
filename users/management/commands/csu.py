@@ -11,7 +11,8 @@ class Command(BaseCommand):
             name='Olga',
             phone='+79222244847',
             is_staff=True,
-            is_superuser=True
+            is_superuser=True,
+            is_active=True
 
         )
 

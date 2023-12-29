@@ -10,7 +10,8 @@ class Command(BaseCommand):
             telegram_account='test_user',
             email='khaidoukova@inbox.ru',
             is_staff=False,
-            is_superuser=False
+            is_superuser=False,
+            is_active=True
         )
 
         user.set_password('320670')
